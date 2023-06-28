@@ -1,0 +1,39 @@
+
+.mainContainer {
+  background: linear-gradient(71.17deg, #FEAF00 19.35%, #F8D442 90.12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  height: 100vh;
+
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 475px;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px; 
+    padding: 24px 16px;
+
+    .loginHeader {
+      font-family: 'Montserrat-Bold', sans-serif;
+      padding-left: 16px;
+      border-left: 6px solid rgba(248, 212, 66, 1);
+    }
+
+    .loginSubHeader {
+      font-family: 'Montserrat-SemiBold', sans-serif;
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+
+    .loginText {
+      margin-top: 8px;
+      font-size: 14px;
+      color: rgb(108 108 108 / 66%);
+    }
+  }
+}
+
