@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '../styles/global.scss';
 import '../styles/fonts.scss';
+import SideBar from '@/components/SideBar/SideBar';
 
 interface MyAppProps {
   Component: React.ComponentType;
@@ -11,13 +11,18 @@ interface MyAppProps {
 function App({ Component, pageProps }: MyAppProps) {
   const router = useRouter();
 
-  useEffect(() => {
-    if (router.pathname !== '/login' && !localStorage.getItem('isAuth')) {
-      router.replace('/login');
-    }
-  }, [router, router.pathname]);
+  const isLoginPage = router.pathname === '/login';
 
-  return <Component {...pageProps} />;
+  const shouldRenderSidebar = !isLoginPage;
+
+  const containerClassName = shouldRenderSidebar ? 'main-container' : '';
+
+  return (
+    <div className={containerClassName}>
+      {shouldRenderSidebar && <SideBar />}
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
 export default App;

@@ -1,0 +1,62 @@
+.sidebarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 100%;
+    background:rgba(242, 234, 225, 1);
+    padding: 8px 24px;
+
+    .sidebarHeader {
+        font-family: 'Montserrat-Bold', sans-serif;
+        padding-left: 16px;
+        border-left: 6px solid rgba(248, 212, 66, 1);
+    }
+
+    .sidebarImage {
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+
+    .userTitle{
+        font-family: 'Montserrat-Bold', sans-serif;
+        margin-bottom: 12px;
+    }
+
+    .userRole{
+        color: rgba(254, 175, 0, 1);
+    }
+
+    .navContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+
+        .navItem {
+            height: 40px;
+            width: 190px;
+            border-radius: 4px;
+            display: flex;
+            margin-bottom: 16px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+            .navText{
+                font-family: 'Montserrat-SemiBold', sans-serif;
+            }
+
+            .navIcon{
+                margin-right: 16px;
+                margin-top: -2px;
+            }
+        }
+
+        .selectedBg{
+            background: rgba(254, 175, 0, 1);
+        }
+    }
+}
