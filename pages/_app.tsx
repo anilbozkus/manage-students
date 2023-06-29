@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import '../styles/global.scss';
 import '../styles/fonts.scss';
 import SideBar from '@/components/SideBar/SideBar';
+import Header from '@/components/Header/Header';
 
 interface MyAppProps {
   Component: React.ComponentType;
@@ -15,12 +16,16 @@ function App({ Component, pageProps }: MyAppProps) {
 
   const shouldRenderSidebar = !isLoginPage;
 
-  const containerClassName = shouldRenderSidebar ? 'main-container' : '';
+  const mainContainerClassName = shouldRenderSidebar ? 'main-container' : '';
+  const contentContainerClassName = shouldRenderSidebar ? 'content-container' : '';
 
   return (
-    <div className={containerClassName}>
+    <div className={mainContainerClassName}>
       {shouldRenderSidebar && <SideBar />}
-      <Component {...pageProps} />
+      <div className={contentContainerClassName}>
+        <Header />
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 }

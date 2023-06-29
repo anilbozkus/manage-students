@@ -16,7 +16,7 @@ export default function SideBar() {
 
     return (
         <div className={styles.sidebarContainer}>
-            <h2 className={styles.sidebarHeader}>MANAGE COURSES</h2>
+            <h3 className={styles.sidebarHeader}>MANAGE COURSES</h3>
             <Image className={styles.sidebarImage} src={avatarImage} alt="avatar"/>
             <h4 className={styles.userTitle}>John Doe</h4>
             <p className={styles.userRole}>Admin</p>
