@@ -4,6 +4,12 @@ import Image from "next/image";
 import avatarImage from "../../public/images/avatar.jpg";
 import HomeIcon from "../../public/icons/Home-Icon.svg";
 import BookmarkIcon from "../../public/icons/Bookmark-Icon.svg";
+import GraduationIcon from "../../public/icons/Graduation-Icon.svg";
+import PaymentIcon from "../../public/icons/Dollar-Icon.svg";
+import ChartIcon from "../../public/icons/Chart-Icon.svg";
+import SettingsIcon from "../../public/icons/Settings-Icon.svg";
+import LogoutIcon from "../../public/icons/Logout-Icon.svg";
+import Link from 'next/link';
 
 export default function SideBar() {
     const router = useRouter();
@@ -17,15 +23,35 @@ export default function SideBar() {
 
             <div className={styles.navContainer}>
                 <div>
-                    <a href='/home' className={`${styles.navItem} ${router.pathname === "/home" ? styles.selectedBg : ""}`}>
+                    <Link href='/home' className={`${styles.navItem} ${router.pathname === "/home" ? styles.selectedBg : ""}`}>
                         <Image className={styles.navIcon} src={HomeIcon} alt="home-icon"/>
                         <p className={styles.navText}>Home</p>
-                    </a>
-                    <a href='/home' className={styles.navItem}>
+                    </Link>
+                    <Link href='/home' className={styles.navItem}>
                         <Image className={styles.navIcon} src={BookmarkIcon} alt="course-icon"/>
                         <p className={styles.navText}>Course</p>
-                    </a>
+                    </Link>
+                    <Link href='/students' className={styles.navItem}>
+                        <Image className={styles.navIcon} src={GraduationIcon} alt="graduation-icon"/>
+                        <p className={styles.navText}>Students</p>
+                    </Link>
+                    <Link href='/home' className={styles.navItem}>
+                        <Image className={styles.navIcon} src={PaymentIcon} alt="payment-icon"/>
+                        <p className={styles.navText}>Payment</p>
+                    </Link>
+                    <Link href='/home' className={styles.navItem}>
+                        <Image className={styles.navIcon} src={ChartIcon} alt="report-icon"/>
+                        <p className={styles.navText}>Report</p>
+                    </Link>
+                    <Link href='/home' className={styles.navItem}>
+                        <Image className={styles.navIcon} src={SettingsIcon} alt="settings-icon"/>
+                        <p className={styles.navText}>Settings</p>
+                    </Link>
                 </div>
+                <Link href='/login' className={styles.navItem}>
+                    <p className={styles.logoutText}>Logout</p>
+                    <Image className={styles.logoutIcon} src={LogoutIcon} alt="logout-icon"/>
+                </Link>
             </div>
         </div>
     )

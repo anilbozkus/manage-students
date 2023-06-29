@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 270px;
-    height: 100%;
+    height: max-content;
     background:rgba(242, 234, 225, 1);
     padding: 8px 24px;
 
@@ -34,16 +34,19 @@
         align-items: center;
         width: 100%;
         margin-top: 50px;
-
+        min-height: 500px;
         .navItem {
             height: 40px;
             width: 190px;
             border-radius: 4px;
             display: flex;
             margin-bottom: 16px;
-            align-items: center;
-            justify-content: center;
+            align-items: center;            
             text-decoration: none;
+            transition: 0.5s;
+            &:hover {
+                background: rgb(254 175 0 / 31%);
+            }
 
             .navText{
                 font-family: 'Montserrat-SemiBold', sans-serif;
@@ -51,7 +54,17 @@
 
             .navIcon{
                 margin-right: 16px;
+                margin-left: 40px;
                 margin-top: -2px;
+                min-width: 20px;
+            }
+
+            .logoutText{
+                margin-right: 16px;
+                margin-left: 45px;
+                margin-top: -2px;
+                min-width: 20px;
+                font-family: 'Montserrat-SemiBold', sans-serif;
             }
         }
 
