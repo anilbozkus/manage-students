@@ -48,8 +48,12 @@
       }
     }
   }
+
   .studentsContentContainer {
     overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     table {
         width: 100%;
@@ -76,5 +80,26 @@
         }
     }
 
+    .tableConfigContainer {
+      display: flex;
+      margin: 24px 0;
+
+      .perPage {
+         color: gray;
+         margin-right: 8px;
+      }
+
+      select {
+        border: none;
+        margin-right: 32px;
+      }
+
+      .paginationButton {
+        border: none;
+        background: none;
+        margin-left: 28px;
+        cursor: pointer;
+      }
+    }
   }
 }

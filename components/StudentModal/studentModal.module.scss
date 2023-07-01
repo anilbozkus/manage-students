@@ -1,0 +1,71 @@
+.modal {
+  width: max-content;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 8px;
+  outline: none;
+  padding: 60px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+}
+
+.formGroup {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input {
+  max-width: 160px;
+  width: max-content;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.submitButton {
+  background-color: rgb(254, 175, 0);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  margin-left: 10px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}

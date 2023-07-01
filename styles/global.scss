@@ -1,27 +1,38 @@
-
 body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Montserrat-Bold", sans-serif;
+  }
+
+  .custom-overlay {
+    background: rgb(86 77 77 / 44%);
+    position: fixed;
+    inset: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    font-size: 14px;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 1);
+  }
 
-    h1 ,h2 ,h3{
-        font-family: 'Montserrat-Bold', sans-serif;
+  .main-container {
+    display: flex;
+    height: 100vh;
+
+
+    .content-container {
+      width: 100%;
+      padding: 0 30px;
+      background: rgba(248, 248, 248, 1);
+      height: max-content;
     }
-
-    p {
-       font-size: 14px;
-       margin: 0; 
-       color: rgba(0, 0, 0, 1);
-    }
-
-    .main-container{
-        display: flex;
-        height: 100vh;
-
-        .content-container{
-            width: 100%;
-            padding: 0 30px;
-            background: rgba(248, 248, 248, 1);
-            height: max-content;
-        }
-    }
+  }
 }
