@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
-import '../styles/global.scss';
-import '../styles/fonts.scss';
-import SideBar from '@/components/SideBar/SideBar';
-import Header from '@/components/Header/Header';
+import { useRouter } from "next/router";
+import "../styles/global.scss";
+import "../styles/fonts.scss";
+import SideBar from "@/components/SideBar/SideBar";
+import Header from "@/components/Header/Header";
 
 interface MyAppProps {
   Component: React.ComponentType;
@@ -12,18 +12,16 @@ interface MyAppProps {
 function App({ Component, pageProps }: MyAppProps) {
   const router = useRouter();
 
-  const isLoginPage = router.pathname === '/login';
+  const isLoginPage = router.pathname === "/login";
 
-  const shouldRenderSidebar = !isLoginPage;
-
-  const mainContainerClassName = shouldRenderSidebar ? 'main-container' : '';
-  const contentContainerClassName = shouldRenderSidebar ? 'content-container' : '';
+  const mainContainerClassName = !isLoginPage ? "main-container" : "";
+  const contentContainerClassName = !isLoginPage ? "content-container" : "";
 
   return (
     <div className={mainContainerClassName}>
-      {shouldRenderSidebar && <SideBar />}
+      {!isLoginPage && <SideBar />}
       <div className={contentContainerClassName}>
-        <Header />
+        {!isLoginPage && <Header />}
         <Component {...pageProps} />
       </div>
     </div>

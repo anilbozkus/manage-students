@@ -31,7 +31,7 @@ export default function SideBar() {
                         <Image className={styles.navIcon} src={BookmarkIcon} alt="course-icon"/>
                         <p className={styles.navText}>Course</p>
                     </Link>
-                    <Link href='/students' className={styles.navItem}>
+                    <Link href='/students?page=0&size=6' className={`${styles.navItem} ${router.pathname === "/students" ? styles.selectedBg : ""}`}>
                         <Image className={styles.navIcon} src={GraduationIcon} alt="graduation-icon"/>
                         <p className={styles.navText}>Students</p>
                     </Link>

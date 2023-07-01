@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.homeContainer}>
-      <Link href='/students' className={`${styles.box} ${styles.students}`}>
+      <Link href='/students?page=1&size=6' className={`${styles.box} ${styles.students}`}>
         <Image src={GraduationIcon} alt="graduation-icon" />
         <p className={styles.boxText}>Students</p>
         <h2 className={styles.boxValue}>243</h2>

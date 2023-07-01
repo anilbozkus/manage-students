@@ -1,0 +1,80 @@
+.studentsMainContainer {
+  display: flex;
+  flex-direction: column;
+
+  .studentsTopContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+
+    .rightSide {
+      display: flex;
+
+      .searchBar {
+        display: flex;
+        align-items: center;
+        margin-right: 32px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        .searchInput {
+          padding: 12px 34px 12px 12px;
+          border: 1px solid rgba(229, 229, 229, 1);
+          border-radius: 8px;
+          flex: 1;
+        }
+
+        .searchInput::placeholder {
+          color: rgba(229, 229, 229, 1);
+        }
+        .searchButton {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          margin-left: -32px;
+        }
+      }
+
+      .addButton {
+        background: rgba(254, 175, 0, 1);
+        border: navajowhite;
+        border-radius: 4px;
+        padding: 16px 32px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .studentsContentContainer {
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        margin-top: 16px;
+        border-collapse: collapse;
+
+        th {
+            color: rgba(172, 172, 172, 1);
+            font-size: 12px;
+            text-align: left;
+        }
+
+        tr {
+          &:before {
+            content: "";
+            display: table-row;
+            height: 10px;
+
+          }
+
+          td {
+            height: 85px;
+          }
+        }
+    }
+
+  }
+}
